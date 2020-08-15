@@ -2,7 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using FluentValidationUsing.Web.DataAccess.EntityFramework.Context;
+using FluentValidationUsing.Web.Entities;
+using FluentValidationUsing.Web.Validators;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,7 +33,18 @@ namespace FluentValidationUsing.Web
             {
                 options.UseSqlServer(Configuration["ConnectionString"]);
             });
-            services.AddControllersWithViews();
+
+            //Eklediðim FluentValidation Kütüphanesini Projeme tanýtmam gerekiyor.
+
+            //Alttaki þekilde tanýtabilirim ancak her entity için ayrý ayrý servis yazmam gerekir. Bu startUp'u þiþirir.
+           
+            //services.AddSingleton<IValidator<Customer>, CustomerValidator>();
+
+            //Yukarýdakinin yerine aþaðýdaki gibi benim assemblym deki IValdator interface'den türemiþ classlarý validator classlarýmý reqister et diyorm.
+
+            services.AddControllersWithViews().AddFluentValidation(options=> {
+                options.RegisterValidatorsFromAssemblyContaining<Startup>();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

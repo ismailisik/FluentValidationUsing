@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ClAY2UNzyiC6vEGRjFNX+TZajRmOYUffq1pQRFdTatiGhl4V7jvNcBCK2g7QOydRedDZtOnwMQhqokDaks0mdQ==",
+  "dgSpecHash": "m1m4hQAkxb43xyZmW/vdZ7yZgy9FLTNPhzOdO+yu81ZNBqCZEdMpDJ4SYROlnZglKGPMHz6q8DgkQEoX0HpgXw==",
   "success": true,
   "projectFilePath": "E:\\ProjectandWork\\GithubWork\\FluentValidationUsing\\FluentValidation\\FluentValidationUsing.Web\\FluentValidationUsing.Web.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\iisik\\.nuget\\packages\\fluentvalidation\\9.1.2\\fluentvalidation.9.1.2.nupkg.sha512",
+    "C:\\Users\\iisik\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.1.2\\fluentvalidation.aspnetcore.9.1.2.nupkg.sha512",
+    "C:\\Users\\iisik\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.1.2\\fluentvalidation.dependencyinjectionextensions.9.1.2.nupkg.sha512",
     "C:\\Users\\iisik\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\iisik\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\iisik\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

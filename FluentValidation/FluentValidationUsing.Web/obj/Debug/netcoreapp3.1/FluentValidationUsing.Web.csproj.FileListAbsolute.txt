@@ -166,10 +166,14 @@ E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValida
 E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\obj\Debug\netcoreapp3.1\FluentValidationUsing.Web.csproj.CoreCompileInputs.cache
-E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\obj\Debug\netcoreapp3.1\FluentValidationUsing.Web.MvcApplicationPartsAssemblyInfo.cache
 E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Create.cshtml.g.cs
 E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Delete.cshtml.g.cs
 E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Details.cshtml.g.cs
 E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Edit.cshtml.g.cs
 E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\obj\Debug\netcoreapp3.1\Razor\Views\Customers\Index.cshtml.g.cs
+E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\bin\Debug\netcoreapp3.1\FluentValidation.dll
+E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\obj\Debug\netcoreapp3.1\FluentValidationUsing.Web.csproj.CoreCompileInputs.cache
+E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\obj\Debug\netcoreapp3.1\FluentValidationUsing.Web.MvcApplicationPartsAssemblyInfo.cs
+E:\ProjectandWork\GithubWork\FluentValidationUsing\FluentValidation\FluentValidationUsing.Web\obj\Debug\netcoreapp3.1\FluentValidationUsing.Web.MvcApplicationPartsAssemblyInfo.cache
