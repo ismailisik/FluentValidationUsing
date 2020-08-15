@@ -1,0 +1,101 @@
+﻿@model FluentValidationUsing.Web.Entities.Customer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <h4>Customer Informations</h4>
+                        <hr />
+                        <div class="form-group">
+                            <label asp-for="Name" class="control-label"></label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="LastName" class="control-label"></label>
+                            <input asp-for="LastName" class="form-control" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Age" class="control-label"></label>
+                            <input asp-for="Age" class="form-control" />
+                            <span asp-validation-for="Age" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Phone" class="control-label"></label>
+                            <input asp-for="Phone" class="form-control" />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="BirthDate" class="control-label"></label>
+                            <input type="date" asp-for="BirthDate" class="form-control" />
+                            <span asp-validation-for="BirthDate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12 ">
+                        <h4>Address Informations</h4>
+                        <hr />
+                        @for (int i = 0; i < 2; i++)
+                        {
+                            <h6>Address @(i+1)</h6>
+                            <br />
+                            <div class="form-group">
+                                <label asp-for="Addresses[i].Country" class="control-label"></label>
+                                <input asp-for="Addresses[i].Country" class="form-control" />
+                                <span asp-validation-for="Addresses[i].Country" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Addresses[i].City" class="control-label"></label>
+                                <input asp-for="Addresses[i].City" class="form-control" />
+                                <span asp-validation-for="Addresses[i].City" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Addresses[i].Neighborhood" class="control-label"></label>
+                                <input asp-for="Addresses[i].Neighborhood" class="form-control" />
+                                <span asp-validation-for="Addresses[i].Neighborhood" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Addresses[i].PostalCode" class="control-label"></label>
+                                <input asp-for="Addresses[i].PostalCode" class="form-control" />
+                                <span asp-validation-for="Addresses[i].PostalCode" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Addresses[i].DoorNumber" class="control-label"></label>
+                                <input asp-for="Addresses[i].DoorNumber" class="form-control" />
+                                <span asp-validation-for="Addresses[i].DoorNumber" class="text-danger"></span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
