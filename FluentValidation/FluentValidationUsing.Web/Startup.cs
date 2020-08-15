@@ -2,9 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using FluentValidationUsing.Web.DataAccess.EntityFramework.Context;
+using FluentValidationUsing.Web.Entities;
+using FluentValidationUsing.Web.Validators;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,7 +30,30 @@ namespace FluentValidationUsing.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddDbContext<TestDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration["ConnectionString"]);
+            });
+
+            //Eklediðim FluentValidation Kütüphanesini Projeme tanýtmam gerekiyor.
+
+            //Alttaki þekilde tanýtabilirim ancak her entity için ayrý ayrý servis yazmam gerekir. Bu startUp'u þiþirir.
+           
+            //services.AddSingleton<IValidator<Customer>, CustomerValidator>();
+
+            //Yukarýdakinin yerine aþaðýdaki gibi benim assemblym deki IValdator interface'den türemiþ classlarý validator classlarýmý reqister et diyorm.
+
+            services.AddControllersWithViews().AddFluentValidation(options=> {
+                options.RegisterValidatorsFromAssemblyContaining<Startup>();
+            });
+
+            //Api tarafýna custom hata mesajý verdirmek için bizim yazdýðýmýz validasyon model state filter þeklinde araya girip mesaj gönderiyordu.Þimdi biz bunu baskýlayýp custom olarak hata yönetimini kendimiz yapacaðýz. Kontroller da post aksiyonuna bakýnýz..
+
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
