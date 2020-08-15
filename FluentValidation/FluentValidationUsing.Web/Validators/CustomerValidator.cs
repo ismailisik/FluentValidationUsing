@@ -40,6 +40,10 @@ namespace FluentValidationUsing.Web.Validators
             //Git beim entitm içerisindeki address entitisini validete et diyorum.
             RuleForEach(x => x.Addresses).SetValidator(new AddressValidator());
 
+            // Biz ister isek Entity miz içerisindeki enum propları da validate edebiliriz. Aşağıya bakınız... Api'ye istek atıp inceleyebilirsiniz. 
+
+            RuleFor(x => x.Gender).NotEmpty().WithMessage(NotEmptyMessage).IsInEnum().WithMessage("Erkek için 1 Bayan için 2 giriniz");
+
         }
     }
 }

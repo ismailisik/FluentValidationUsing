@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentValidationUsing.Web.Entities.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace FluentValidationUsing.Web.Entities
         public string Email { get; set; }
         public string Phone { get; set; }
         public DateTime? BirthDate { get; set; }
+        public Gender Gender { get; set; }
 
         //Burada IList kullandık çünkü ben şu şekilde erişmek istiyorum customer.Address[0] gibi bana index'li gelsin istiyorum adreslerin. 
         public IList<Address> Addresses { get; set; }
